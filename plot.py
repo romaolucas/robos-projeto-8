@@ -1,7 +1,7 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import csv
 import numpy as np
-import matplotlib.mlab as mlab
+# import matplotlib.mlab as mlab
 import math
 
 
@@ -13,7 +13,7 @@ errors = []
 for row in x:
 	if (row[0] == "read"): continue
 	reads.append(float(row[0]))
-	errors.append(abs(float(row[0]) - float(row[1])))
+	errors.append(float(row[0]) - float(row[1]))
 
 
 # grafico da normal do erro
@@ -32,11 +32,11 @@ desv = math.sqrt(desv / len(errors))
 print(acc)
 print(desv)
 
-mu = acc
-sigma = desv
-x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
-plt.plot(x,mlab.normpdf(x, mu, sigma))
-plt.show()
+# mu = acc
+# sigma = desv
+# x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+# plt.plot(x,mlab.normpdf(x, mu, sigma))
+# plt.show()
 
 
 # grafico do medido vs erro
